@@ -4,14 +4,12 @@ import ModalCloseIcon from "./ModalCloseIcon";
 import { useSelector } from "react-redux/es/exports";
 import { RootState } from "../../redux/types";
 
-const CreateAccountModal = () => {
+const CreateAccountModal: React.FC = () => {
   //
   //
   const hasModalShow = useSelector(
     (state: RootState) => state.signupModalReducer
   );
-
-  console.log(hasModalShow);
 
   //return
   return hasModalShow ? (
@@ -21,7 +19,7 @@ const CreateAccountModal = () => {
         id="authentication-modal"
         tabIndex={-1}
         aria-hidden="true"
-        className="fixed top-0 left-0 right-0 z-50  w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full"
+        className="fixed xmd:flex xmd:justify-center xmd:items-center top-0 left-0 right-0 z-50  w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full"
       >
         <div className="relative w-full h-full max-w-md md:h-auto">
           {/* Modal content */}

@@ -1,6 +1,6 @@
 import React from "react";
 
-const DOBPicker = () => {
+const DOBPicker: React.FC = () => {
   return (
     <div className="">
       <label htmlFor="date" className="text-[13px]">
@@ -104,7 +104,7 @@ const DOBPicker = () => {
                 type="radio"
                 defaultValue="true"
                 name="list-radio"
-                className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 "
               />
               <label
                 htmlFor="horizontal-list-radio-license"
@@ -121,7 +121,7 @@ const DOBPicker = () => {
                 type="radio"
                 defaultValue="true"
                 name="list-radio"
-                className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 "
               />
               <label
                 htmlFor="horizontal-list-radio-id"
@@ -138,7 +138,7 @@ const DOBPicker = () => {
                 type="radio"
                 defaultValue="true"
                 name="list-radio"
-                className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 "
               />
               <label
                 htmlFor="horizontal-list-radio-millitary"

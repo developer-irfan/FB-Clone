@@ -1,12 +1,15 @@
 import "./App.css";
+import Homepage from "./pages/Home/Homepage";
 import Login from "./pages/Login";
-import CreateAccount from "./pages/Signup/CreateAccount";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div>
-      <Login />
-      <CreateAccount />
+      <Routes>
+        <Route path="/main" element={<Homepage />} />
+        <Route path="/" element={<Login />} />
+      </Routes>
     </div>
   );
 }

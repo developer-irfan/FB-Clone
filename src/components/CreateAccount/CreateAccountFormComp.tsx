@@ -1,10 +1,13 @@
-import React from "react";
 import DOBPicker from "./DOBPicker";
+import { useTranslation } from "react-i18next";
 
-const CreateAccountFormComp = () => {
+const CreateAccountFormComp: React.FC = () => {
+  const { t, i18n } = useTranslation();
+
+  //
   return (
     <div className="mt-3">
-      <form className="space-y-3" action="#">
+      <form className="space-y-3">
         <div className="xmd:flex gap-3">
           <div>
             <input
@@ -14,6 +17,7 @@ const CreateAccountFormComp = () => {
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
               placeholder="First Name"
               required
+              autoFocus
             />
           </div>
           <div>
@@ -49,19 +53,14 @@ const CreateAccountFormComp = () => {
         </div>
         <DOBPicker />
         <p className="text-[12px] text-gray-500">
-          People who use our service may have uploaded your contact information
-          to Facebook. Learn more.
+          {t("peopleWhoUseOurServiceMayHaveUploadedYour")}
         </p>
-        <p className="text-[12px] text-gray-500">
-          By clicking Sign Up, you agree to our Terms, Privacy Policy and
-          Cookies Policy. You may receive SMS notifications from us and can opt
-          out at any time.
-        </p>
+        <p className="text-[12px] text-gray-500">{t("byClickingSignup")}</p>
         <button
           type="submit"
           className="w-[200px] flex items-center justify-center bg-[#3ca626] text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2 text-center mx-auto"
         >
-          Sign up
+          {t("signup")}
         </button>
       </form>
     </div>

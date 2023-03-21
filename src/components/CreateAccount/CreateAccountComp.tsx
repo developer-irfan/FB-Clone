@@ -1,7 +1,7 @@
 import React from "react";
 import CreateAccountModal from "./CreateAccountModal";
 
-const CreateAccountComp = () => {
+const CreateAccountComp: React.FC = () => {
   return (
     <div>
       <CreateAccountModal />
