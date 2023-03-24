@@ -1,4 +1,4 @@
-import { HIDESIGNUPMODAL, SHOWSIGNUPMODAL, SHOWSPLASHSCREEN } from "../Constant/ActionTypes";
+import { HIDESIGNUPMODAL, HIDESPLASHSCREEN, SHOWSIGNUPMODAL, SHOWSPLASHSCREEN } from "../Constant/ActionTypes";
 
 interface ShowSignupModalAction {
   type: typeof SHOWSIGNUPMODAL;
@@ -21,6 +21,14 @@ export const hideSignupModal = () => {
 export const showSplashScreen = () => {
   return {
     type: SHOWSPLASHSCREEN,
+  };
+
+}
+
+//hide splash screen
+export const hideSplashScreen = () => {
+  return {
+    type: HIDESPLASHSCREEN,
   };
 
 }

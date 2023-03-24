@@ -1,13 +1,23 @@
 import React from "react";
 import NavbarComp from "./Navbar/NavbarComp";
-import LeftSideBar from "./LeftSideBar/LeftSideBarComp";
+import LeftSideBarComp from "./LeftSideBar/LeftSideBarComp";
+import { useSelector } from "react-redux/es/exports";
+import { RootState } from "../../redux/types";
 
 const Main: React.FC = () => {
+  const hasSplashScreen = useSelector(
+    (state: RootState) => state.splashScreenReducer
+  );
+
   return (
-    <div>
-      <NavbarComp />
-      <LeftSideBar />
-    </div>
+    <>
+      {!hasSplashScreen && (
+        <div>
+          <NavbarComp />
+          <LeftSideBarComp />
+        </div>
+      )}
+    </>
   );
 };
 

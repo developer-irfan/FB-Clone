@@ -1,5 +1,9 @@
 import React, { useState } from "react";
-import { showSignupModal, showSplashScreen } from "../../redux/Actions/Action";
+import {
+  showSignupModal,
+  showSplashScreen,
+  hideSplashScreen,
+} from "../../redux/Actions/Action";
 import { useTranslation } from "react-i18next";
 import { useSelector, useDispatch } from "react-redux/es/exports";
 import { RootState } from "../../redux/types";
@@ -34,6 +38,10 @@ const LoginFormComp: React.FC = () => {
     (state: RootState) => state.signupModalReducer
   );
 
+  const hasSplashScreen = useSelector(
+    (state: RootState) => state.splashScreenReducer
+  );
+
   //
   const navigate = useNavigate();
 
@@ -64,7 +72,10 @@ const LoginFormComp: React.FC = () => {
     event.preventDefault();
     dispatch(showSplashScreen());
     setTimeout(() => {
+      // dispatch(hideSplashScreen());
+      console.log(hasSplashScreen);
       navigate("/main");
+      console.log("2sec done");
     }, 2000);
   };
 
