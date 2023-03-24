@@ -7,6 +7,7 @@ import usericon from "../../../../assets/images/user.jpg";
 const HomeComp: React.FC = () => {
   return (
     <>
+      {/* <h2>Your pages and profiles</h2> */}
       <li className="rounded-sm flex items-center">
         <Link to="#" className="flex items-center p-2 space-x-3 rounded-md ">
           <FontAwesomeIcon
